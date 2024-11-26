@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0277bd; /* Fondo azul */
+    color: #000; /* Texto en negro */
+}
+
+/* Títulos */
+span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #023047; /* Detalle en #023047 */
+}
+
+/* Formulario */
+form {
+    background-color: white; /* Fondo blanco para destacar */
+    border: 2px solid #023047; /* Borde en #023047 */
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #023047; /* Etiquetas en #023047 */
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, 
+form textarea, 
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus, 
+form textarea:focus, 
+form select:focus {
+    border-color: #023047;
+    outline: none;
+    box-shadow: 0 0 5px #023047;
+}
+
+form button {
+    background-color: #023047;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #03576e;
+    transform: scale(1.05);
+}
+
+/* Imagen Actual */
+form img {
+    display: block;
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form p {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Mensaje de error */
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 500px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+    form {
+        width: 700px;
+    }
+}

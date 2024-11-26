@@ -77,7 +77,7 @@ const productController = {
             if (imagen_producto) producto.imagen_producto = imagen_producto;
             producto.id_categoria = id_categoria;
             await producto.save();
-            res.redirect('products/products')
+            res.redirect('/products/products')
         } catch (error) {
             console.log(error);
             res.status(500).send({ message: 'Error 500: Error al actualizar el producto'});
