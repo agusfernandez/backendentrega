@@ -11,11 +11,6 @@
     object-fit: cover;
 }
 
-.subtitle {
-    font-size: 20px;
-    color: #000;
-    margin-bottom: 40px;
-}
 
 
 .carousel-caption {
@@ -155,9 +150,7 @@
         width: 40%;
     }
 
-    .card-image {
-        height: 200px;
-    }
+  
 
     .image-cont {
         width: 49%;

@@ -85,6 +85,12 @@ li a {
     font-size: 14px;
 }
 
+.subtitle {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
 
 
 @media screen and (min-width: 501px) {
