@@ -29,13 +29,14 @@ const productController = {
     save: async (req, res) => {
 
         const {nombre_producto, marca_producto, descrip_producto, precio_producto,estado_producto, stock_producto , id_categoria} = req.body;
-        const imagen_producto = req.file ? req.file.name : null;
+        const imagen_producto = req.file ? req.file.filename : null;
+        console.log(imagen_producto);
 
         try {
             await Producto.create({nombre_producto, marca_producto, descrip_producto, precio_producto,estado_producto, stock_producto ,imagen_producto, id_categoria});
             res.redirect('/products/products');
         } catch(error){
-            console.log(error);
+            console.log('Subir producto' , error);
             res.status(500).send({message: 'Error 500: Error al guardar el producto' });
         }
     }
