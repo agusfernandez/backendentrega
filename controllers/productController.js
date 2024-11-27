@@ -72,7 +72,6 @@ const productController = {
             producto.precio_producto = precio_producto;
             producto.estado_producto = estado_producto;
             producto.stock_producto = stock_producto;
-            producto.imagen_producto = imagen_producto;
             producto.id_categoria = id_categoria;
             if (imagen_producto) producto.imagen_producto = imagen_producto;
             producto.id_categoria = id_categoria;
@@ -84,16 +83,37 @@ const productController = {
         }
     },
 
+        // Eliminar Producto
 
-    destroy: async (req, res) => {
-        const { id_producto } = req.params;
-        try{
-            await Producto.destroy({ where: { id_producto } });
-            res.redirect('/products/products');
-            } catch{
-                res.status(500).send({ message: 'Error al eliminar la moto'});
+        delete: async (req, res) => {
+            const { id_producto } = req.params;
+            try {
+
+                const producto = await Producto.findByPk(id_producto);
+                if (!producto) {
+                    return res.status(404).send({ message: 'Producto no encontrado' });
+                }
+                res.render('products/delete' , { producto });
+
+            }  catch(error) {
+                console.log(error);
+                res.status(500).send({ message: 'Error al cargar la página de confirmación' });
+
+            }
+
+            
+        },
+
+
+        destroy: async (req, res) => {
+            const { id_producto } = req.params;
+            try{
+                await Producto.destroy({ where: { id_producto } });
+                res.redirect('/products/products');
+                } catch{
+                    res.status(500).send({ message: 'Error al eliminar la moto'});
+            }
         }
-    }
 
 }
 

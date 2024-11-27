@@ -15,28 +15,32 @@
     <body>
         <%- include('../partials/menu') %>
 
-        <span>Productos</span>
+        <h2 class="subtitle">Lista de Productos</h2>
 
         <div class="container">
             <div class="row-container">
                 <% productos.forEach(producto => { %>
-                    <div class="card">
+                    <div class="card"  style="width: 18rem;">
                         <img src="../images/<%=producto.imagen_producto%>" alt="<%=producto.nombre_producto%>" class="card-image"/>
                         <div class="card-body">
                             <h2 class="card-title"><%=producto.nombre_producto%></h2>
-                            <p class="card-text"><%=producto.descrip_producto%></p>
+                            <p class="card-text card-description"><%=producto.descrip_producto%></p>
                             <p class="card-text">Precio: $<%=producto.precio_producto%></p>
-                            <a class="btn btn-primary" href="/products/<%=producto.id_producto%>/edit">Editar</a>
-                            <form action="/products/<%=producto.id_producto%>?_method=DELETE" method="POST">
-                                <button type="submit">Eliminar</button>
-                            </form>
+
+                            <div class="card-actions">
+                                <a class="btn btn-primary" href="/products/<%=producto.id_producto%>/edit">Editar</a>
+                                <!--
+                                <form action="/products/<%=producto.id_producto%>?_method=DELETE" method="POST">
+                                    <button type="submit">Eliminar</button>
+                                </form>-->
+                                <a class="btn btn-secondary" href="/products/<%=producto.id_producto%>/delete">Eliminar</a>
+                            </div>
+                  
                         </div>
                     </div>
             
                 <% }) %>
             </div>
-            
-            <a href="/products/create">Crear Producto</a>
         </div>
 
         <%- include('../partials/footer') %>

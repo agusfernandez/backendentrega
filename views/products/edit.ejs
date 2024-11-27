@@ -16,7 +16,7 @@
     <body>
         <%- include('../partials/menu') %>
 
-        <span>Editar <%=producto.nombre_producto%></span>
+        <h2 class="subtitle">Editar <%=producto.nombre_producto%></h2>
 
         <% if (producto) { %>
             <form action="/products/<%=producto.id_producto%>?_method=PUT" method="POST" enctype="multipart/form-data">
