@@ -174,7 +174,7 @@
 
 
  /* Estilo para el título */
-h3 {
+.titulo {
     text-align: center;
     font-size: 24px;
     color: #023047; /* Azul personalizado */
