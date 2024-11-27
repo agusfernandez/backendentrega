@@ -66,13 +66,31 @@
             </div>
        
         </section>
-      
 
+        <section class="miniaturas">
+
+          <h3>Productos destacados</h3>
+
+          <div class="gallery-container">
+            <!-- Imagen principal -->
+            <div class="main-image">
+                <img id="mainImage" src="images/1732576925370-3.jpg" alt="Imagen principal">
+            </div>
+            <!-- Miniaturas -->
+            <div class="thumbnails">
+                <img class="thumbnail" src="images/1732576925370-3.jpg" alt="Miniatura 1" onclick="changeImage('images/1732576925370-3.jpg')">
+                <img class="thumbnail" src="images/1732578892959-5.jpg" alt="Miniatura 2" onclick="changeImage('images/1732578892959-5.jpg')">
+                <img class="thumbnail" src="images/1732588688195-1.jpg" alt="Miniatura 3" onclick="changeImage('images/1732588688195-1.jpg')">
+                <img class="thumbnail" src="images/1732579169495-4.jpg" alt="Miniatura 4" onclick="changeImage('images/1732579169495-4.jpg')">
+            </div>
+        </div>
+      </section>
 
 
         <%- include('../partials/footer') %>
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/miniaturas.js"></script>
 
 </html>

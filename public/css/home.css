@@ -168,3 +168,75 @@
         gap: 30px;
     }
 }
+
+
+ /* Estilo para el título de la sección */
+
+
+ /* Estilo para el título */
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #023047; /* Azul personalizado */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Contenedor principal de la galería */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Imagen principal */
+.main-image img {
+    width: 400px; /* Tamaño principal */
+    height: auto; /* Mantener proporciones */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.main-image img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Contenedor de miniaturas */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre miniaturas */
+}
+
+/* Miniaturas */
+.thumbnail {
+    width: 80px; /* Tamaño de las miniaturas */
+    height: auto; /* Mantener proporciones */
+    cursor: pointer; /* Cambiar cursor al pasar */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid transparent; /* Sin borde visible */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #1E90FF; /* Borde azul al pasar */
+    transform: scale(1.1); /* Agrandar un poco */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-image img {
+        width: 300px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .thumbnail {
+        width: 60px; /* Reducir miniaturas en pantallas pequeñas */
+    }
+}
+
+.miniaturas{
+    margin-top: 10px;
+}
